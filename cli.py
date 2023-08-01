@@ -33,7 +33,7 @@ class Package:
 
 
 VENDOR_PACKAGES = (
-    Package("filament", "1.25.6"),
+    Package("filament", "1.40.3"),
     Package("v8", "10.1.69"),
     Package("imgui", "docking"),
 )

@@ -3,7 +3,7 @@ from conans import ConanFile, CMake, tools
 
 class FilamentConan(ConanFile):
     name = "filament"
-    version = "1.25.6"
+    version = "1.40.3"
     license = "Apache License 2.0"
     homepage = "https://github.com/google/filament"
     url = "https://github.com/luizgabriel/conan-filament"
@@ -42,8 +42,8 @@ class FilamentConan(ConanFile):
 
     def source(self):
         git = tools.Git(folder="filament")
-        git.clone("https://github.com/google/filament.git", "v" + self.version, shallow=True)
-
+        #git.clone("https://github.com/google/filament.git", "v" + self.version, shallow=True)
+        git.clone("https://github.com/armedpotato/filament.git", "v" + self.version, shallow=True)
         tools.replace_in_file("filament/CMakeLists.txt", "project(TNT)",
                               '''project(TNT)
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
